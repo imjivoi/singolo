@@ -1,0 +1,180 @@
+body {
+    font-family: 'Lato', sans-serif;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #2d303a;
+    height: 89px;
+    margin: 0 auto;
+    color: white;
+    font-weight: 700;
+    border-bottom: 6px #323746 solid;
+    
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+h1 {
+    padding-left: 40px;
+    font-size: 25px;
+    padding-top: 30px;
+    margin: 0;
+}
+
+.logo__star {
+    color: #f06c64;
+}
+
+.nav {
+    width: 344px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-right: 40px;
+    margin-top: 42px;
+    padding: 0px;
+ }     
+
+.nav__point {
+    margin: 0 auto;
+    color: #494e62;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    transition: color .2s linear;
+}
+
+.nav__link:hover {
+    color: #f06c64;
+}
+
+.slider {
+    background-color: #f06c64;
+    height: 594px;
+    border-bottom: 6px #ea676b solid;
+    margin-bottom: 0;
+}
+
+.slider__inner{
+    width: 940px;
+    display: flex;
+    flex-shrink: inherit;
+    margin: auto;
+    padding-top: 2px;
+    
+}
+
+.arrow__left {
+    
+    padding-top: 280px;
+}
+
+.iphone__vertical {
+    padding-left: 54px;
+    padding-top: 50px;
+}
+
+.iphone__horizontal {
+    padding-left: 73px;
+    padding-top: 172px;
+    padding-right: 56px;
+    margin: 0px;
+}
+
+.arrow__right {
+    
+    padding-right: 100px;
+    padding-top: 280px;
+}
+
+.arrow {
+    transition: all .2s ease;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+.our-services {
+    margin-top: 0;
+    background-color: #f2f2f2;
+    color: #666d89;
+    height: 494px;
+    border-bottom: 6px #fff solid;
+}
+
+.title,
+.services {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 900;
+    padding-top: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+p {
+    font-weight: 300;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.services {
+    margin-top: 47px;
+    padding-top: 0px;
+    display: flex;
+}
+
+#bottom {
+    margin-top: 33px;
+}
+
+.list__services {
+    flex: 1 1 0;
+    position: relative;
+    padding-top: 0px;
+}
+
+.services__icon {
+    position: absolute;
+    margin-right: 20px;
+}
+
+.services__title {
+    font-size: 18px;
+    font-weight: 900;
+    padding: 0px;
+}
+
+.services__text{
+    font-size: 12px;
+    text-align: justify;
+    line-height: 20px;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.services__title,
+.services__text {
+    padding-left: 80px;
+}
+
+.padding__right {
+    padding-right: 20px;
+}
