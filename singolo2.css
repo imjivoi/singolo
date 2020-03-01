@@ -1,0 +1,144 @@
+
+body {
+    width: 1020px;
+    font-family: 'Lato', sans-serif;
+    margin: 0 auto;
+    color: #767e9e;
+}
+
+header {
+    background-color: #2d303a;
+    height: 864px;
+    border-bottom: 6px #323746 solid;
+    margin-bottom: 0;
+}
+
+.wrapper {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.content__head {
+    padding-top: 40px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.header__par {
+    margin: 0;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.content__buttons {
+    margin: 0;
+    padding-top: 17px;
+    display: flex;
+    margin-bottom: 19px;
+}
+
+button {
+    padding-top: 4px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 5px;
+    color: #767e9e;
+    background-color: #2d303a;
+    border-color: #767e9e;
+    border-width: 1px;
+    border-style: solid;
+    margin-right: 10px;
+}
+
+button:focus {
+    color: #fff;
+    border-color: #fff;
+    
+}
+
+.block__pics {
+    margin: 0;
+}
+
+.content__pics {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: #f2f2f2;
+    height: 728px;
+    border-bottom: 6px #fff solid;
+}
+
+.about {
+    margin-right: 0;
+    padding-top: 60px;
+    text-align: justify;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+.about__us {
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.persons {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 14px;
+}
+
+.persons__content {
+    margin-right: 0;
+    padding: 0px;
+    width: 300px;
+}
+
+.photos {
+    margin: 0  ;
+    padding-top: 12px;
+}
+
+.name {
+    padding-top: 12px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.name__description {
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.icons {
+    padding-top: 25px;
+}
+
+.icons img {
+    padding-right: 5px;
+    transition: all .2s ease;
+}
+.icons img:hover {
+    transform: scale(1.05);
+}
