@@ -116,3 +116,72 @@ function changeSlideRight() {
     }, delay);
   }
 }
+
+//iphone screen on/off
+
+const iphoneVert = document.querySelector(".iphone__vertical");
+const iphoneHoriz = document.querySelector(".iphone__horizontal");
+const iphoneVertOff = document.querySelector(".black_screen_one");
+const iphoneHorizOff = document.querySelector(".black_screen_two");
+
+iphoneVert.addEventListener("click", function() {
+  iphoneVertOff.classList.toggle("screen_off");
+});
+iphoneHoriz.addEventListener("click", function() {
+  iphoneHorizOff.classList.toggle("screen_off");
+});
+
+//portfolio buttons
+const BUTTONS = document.getElementById("buttons");
+const ul = document.getElementById("list");
+const li = [...document.querySelectorAll("ul > li")];
+const imageActive = document.querySelectorAll(".image-active");
+const body = document.querySelectorAll("body");
+
+BUTTONS.addEventListener("click", event => {
+  BUTTONS.querySelectorAll("button.buttons-portfolio").forEach(el =>
+    el.classList.remove("button-active")
+  );
+  event.target.classList.add("button-active");
+
+  const shuffled = li.slice();
+  do {
+    shuffled.sort(() => 0.5 - Math.random());
+  } while (shuffled.some((picture, i) => picture == li[i]));
+  shuffled.forEach(picture => ul.append(picture));
+});
+
+ul.addEventListener("click", event => {
+  if (event.target.tagName != "IMG") return;
+  ul.querySelectorAll("li").forEach(el =>
+    el.lastElementChild.classList.remove("image-active")
+  );
+  event.target.classList.add("image-active");
+});
+
+// form
+
+const submitBtn = document.getElementById("submit");
+const closeBtn = document.getElementById("close-btn");
+
+submitBtn.addEventListener("click", () => {
+  event.preventDefault();
+  const nameVal = document.getElementById("name").value;
+  const emailVal = document.getElementById("email").value;
+  const subject = document.getElementById("subject").value;
+  const description = document.getElementById("description").value;
+  if (nameVal !== "" && emailVal.includes("@")) {
+    document.getElementById("result-subject").innerText = "Subject: " + subject;
+    document.getElementById("result-description").innerText =
+      "Description: " + description;
+
+    document.getElementById("message-block").classList.remove("hidden");
+  }
+});
+
+closeBtn.addEventListener("click", () => {
+  document.getElementById("result-subject").innerText = "";
+  document.getElementById("result-description").innerText = "";
+  document.getElementById("message-block").classList.add("hidden");
+  document.getElementById("form").reset();
+});

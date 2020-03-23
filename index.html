@@ -35,20 +35,23 @@
         <div class="carousel">
           <div class="slider_content">
             <div class="slider__inner slide_1">
-              <span>
+              <span class="iphone__vertical">
                 <img
                   src="assets/images/iphone-vertical.png"
                   alt="Iphone vertical"
-                  class="iphone__vertical"
+                  class="iphone__vertical__img"
                 />
               </span>
-              <span>
+              <span class="iphone__horizontal">
                 <img
                   src="assets/images/iphone-horizontal.png"
                   alt="Iphone horizontal"
-                  class="iphone__horizontal"
+                  class="iphone__horizontal__img"
                 />
               </span>
+
+              <span class="black_screen_one"></span>
+              <span class="black_screen_two"></span>
             </div>
             <div class="slider__inner slide_2 slide_hide">
               <img
@@ -171,15 +174,17 @@
             eget lacinia odio sem nec elit.
           </p>
         </div>
-        <div class="content__buttons">
+        <div class="content__buttons" id="buttons">
           <button class="buttons-portfolio">All</button>
           <button class="buttons-portfolio">Web Design</button>
           <button class="buttons-portfolio">Graphic Design</button>
           <button class="buttons-portfolio">Artwork</button>
         </div>
         <div class="block__pics">
-          <ul>
-            <li><img src="assets/images/singolo2_1.png" alt="" /></li>
+          <ul id="list">
+            <li>
+              <img src="assets/images/singolo2_1.png" alt="" />
+            </li>
             <li><img src="assets/images/singolo2_2.png" alt="" /></li>
             <li><img src="assets/images/singolo2_3.png" alt="" /></li>
             <li><img src="assets/images/singolo2_4.png" alt="" /></li>
@@ -264,18 +269,40 @@
           </p>
         </div>
         <div class="contacts">
-          <form method="POST">
-            <input type="text" placeholder="Name (Required)" required />
-            <input type="email" placeholder="Email (Required)" required />
-            <input type="text" placeholder="Subject" />
+          <form id="form">
+            <input
+              type="text"
+              placeholder="Name (Required)"
+              id="name"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email (Required)"
+              id="email"
+              required
+            />
+            <input type="text" placeholder="Subject" id="subject" />
             <textarea
-              name=""
-              id=""
+              name="description"
+              id="description"
               cols="30"
               rows="10"
               placeholder="Describe your project in detail..."
             ></textarea>
-            <button type="submit">Submit</button>
+            <input type="submit" id="submit" value="Submit" />
+
+            <div id="message-block" class="hidden">
+              <div id="message">
+                <p id="status-of-letter">
+                  The letter was sent <br /><span id="result-subject"> </span
+                  ><br />
+                  <span id="result-description"> </span>
+                </p>
+                <br />
+                <button id="close-btn">OK</button>
+              </div>
+            </div>
           </form>
           <aside>
             <div class="contacts_title">Contact Information</div>
