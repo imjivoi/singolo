@@ -189,17 +189,16 @@ closeBtn.addEventListener("click", () => {
 
 // responsive
 const sidebarIcon = document.querySelector(".sidebar-icon");
+const sidebarBlock = document.querySelector(".sidebar-block");
 const sidebar = document.querySelector(".sidebar");
-
-let windowWidth = window.matchMedia("(max-width: 768px)");
 
 sidebarIcon.addEventListener("click", event => {});
 
 document.addEventListener("click", e => {
   console.log(e.target.className);
   if (e.target == sidebarIcon) {
-    if (sidebar.classList.contains("hide")) {
-      sidebar.classList.toggle("hide");
+    if (sidebarBlock.classList.contains("hide")) {
+      sidebarBlock.classList.toggle("hide");
       sidebarIcon.classList.add("sidebar-icon-rotate-right");
 
       sidebar.classList.add("sidebar-to-right");
@@ -209,30 +208,26 @@ document.addEventListener("click", e => {
         sidebar.classList.remove("sidebar-to-right");
       }, 300);
     } else {
-      if (
-        e.target.className !== sidebar &&
-        sidebar.classList.contains("hide") == false
-      ) {
-        sidebarIcon.classList.add("sidebar-icon-rotate-left");
+      sidebarIcon.classList.add("sidebar-icon-rotate-left");
 
-        sidebar.classList.add("sidebar-to-left");
-        setTimeout(() => {
-          sidebarIcon.classList.remove("sidebar-icon-rotate-left");
-          sidebarIcon.classList.toggle("rotated");
-          sidebar.classList.remove("sidebar-to-left");
-          sidebar.classList.toggle("hide");
-        }, 300);
-      } else {
-        sidebarIcon.classList.add("sidebar-icon-rotate-left");
-
-        sidebar.classList.add("sidebar-to-left");
-        setTimeout(() => {
-          sidebarIcon.classList.remove("sidebar-icon-rotate-left");
-          sidebarIcon.classList.toggle("rotated");
-          sidebar.classList.remove("sidebar-to-left");
-          sidebar.classList.toggle("hide");
-        }, 300);
-      }
+      sidebar.classList.add("sidebar-to-left");
+      setTimeout(() => {
+        sidebarIcon.classList.remove("sidebar-icon-rotate-left");
+        sidebarIcon.classList.toggle("rotated");
+        sidebar.classList.remove("sidebar-to-left");
+        sidebarBlock.classList.toggle("hide");
+      }, 300);
     }
+  }
+  if (e.target == sidebarBlock) {
+    sidebarIcon.classList.add("sidebar-icon-rotate-left");
+
+    sidebar.classList.add("sidebar-to-left");
+    setTimeout(() => {
+      sidebarIcon.classList.remove("sidebar-icon-rotate-left");
+      sidebarIcon.classList.toggle("rotated");
+      sidebar.classList.remove("sidebar-to-left");
+      sidebarBlock.classList.toggle("hide");
+    }, 300);
   }
 });

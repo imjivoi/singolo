@@ -1,7 +1,7 @@
 body {
   font-family: "Lato", sans-serif;
   width: 1020px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .wrapper {
@@ -382,10 +382,17 @@ li {
   list-style: none;
   padding-bottom: 20px;
   margin: 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+li:hover {
+  transform: scale(1.01);
 }
 
 .image-active {
-  border: 5px #f06c64 solid;
+  outline: 5px #f06c64 solid;
+  outline-offset: -5px;
 }
 
 .aboutus-section {
@@ -781,7 +788,13 @@ footer {
   .slider-2 {
     width: 375px;
   }
-
+  body {
+    margin: 0;
+  }
+  .wrapper {
+    margin-left: 32px;
+    margin-right: 29px;
+  }
   .header__inner {
     display: flex;
     flex-direction: row;
@@ -795,7 +808,7 @@ footer {
     z-index: 1;
     min-width: 278px;
     height: 100%;
-    left: 24%;
+    left: 0%;
     top: 0;
     background: #2d303a;
     box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
@@ -891,7 +904,7 @@ footer {
   }
   h1 {
     padding-top: 0;
-    padding-left: 103px;
+    padding-left: 117px;
     font-style: normal;
     font-weight: bold;
     font-size: 22px;
@@ -900,33 +913,170 @@ footer {
   #menu {
     visibility: hidden;
   }
-
-  .sidebar {
-    display: block;
+  .sidebar-block {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #88888888;
   }
+
   .hide {
     display: none;
   }
   .sidebar-to-right {
-    animation: right 0.3s ease-in-out;
+    animation: barright 0.3s ease-in-out;
   }
   .sidebar-to-left {
-    animation: left 0.3s ease-in-out;
+    animation: barleft 0.3s ease-in-out;
   }
-  @keyframes right {
+  @keyframes barright {
     from {
       left: -100%;
     }
     to {
-      left: 16%;
+      left: 0%;
     }
   }
-  @keyframes left {
+  @keyframes barleft {
     from {
-      left: 16%;
+      left: 0%;
     }
     to {
       left: -100%;
     }
+  }
+  .slider,
+  .slider-2 {
+    height: 218.38px;
+  }
+  .slider__inner:last-child {
+    top: -120px;
+    left: -32px;
+    position: absolute;
+  }
+  .iphone__vertical__img {
+    height: 177.57px;
+    width: 88.24px;
+  }
+  .iphone__vertical {
+    padding: 0;
+    width: 88.24px;
+    height: 177.57px;
+    position: relative;
+    top: 20px;
+
+    left: 10px;
+  }
+  .iphone__horizontal {
+    width: 177.57px;
+    height: 88.24px;
+    padding: 0;
+    position: relative;
+    top: 64.97px;
+    left: 33px;
+  }
+  .iphone__horizontal__img {
+    width: 177.57px;
+    height: 88.24px;
+    margin-right: 30px;
+  }
+  .black_screen_one {
+    top: 44px;
+    left: 5px;
+    height: 123px;
+    width: 69px;
+  }
+
+  .black_screen_two {
+    top: 70px;
+    left: 142px;
+    width: 120px;
+    height: 70px;
+  }
+  .arrows {
+    top: 100px;
+    left: -23px;
+    width: 394px;
+  }
+  .arrow__right {
+    padding: 0px;
+  }
+  .our-services {
+    height: 100%;
+  }
+  .list__services {
+    width: 100%;
+  }
+  .content__buttons button {
+    font-size: 10px;
+  }
+  li {
+    width: 151px;
+    height: 128px;
+    padding-bottom: 14px;
+  }
+  li img {
+    width: 100%;
+    height: 100%;
+  }
+  .aboutus-section {
+    height: 100%;
+    padding-bottom: 40px;
+  }
+  .persons {
+    flex-direction: column;
+    padding: 0;
+  }
+  .persons__content {
+    width: 100%;
+    padding-top: 25px;
+  }
+  .photos {
+    margin: 0;
+    padding-top: 12px;
+    width: 104%;
+  }
+  .name__description {
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: justify;
+    width: 104%;
+  }
+  #contact {
+    height: 100%;
+  }
+  .contacts {
+    height: 100%;
+    flex-direction: column;
+  }
+  .icons {
+    padding-top: 16px;
+  }
+  form {
+    height: 100%;
+    width: 100%;
+  }
+  form input,
+  textarea {
+    width: 300px;
+  }
+  #submit {
+    width: 315px;
+  }
+  aside {
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 0;
+  }
+  .copyright {
+    display: none;
+  }
+  .socials_network {
+    margin: auto;
   }
 }
