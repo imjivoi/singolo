@@ -206,7 +206,7 @@ document.addEventListener("click", e => {
         sidebarIcon.classList.remove("sidebar-icon-rotate-right");
         sidebarIcon.classList.toggle("rotated");
         sidebar.classList.remove("sidebar-to-right");
-      }, 300);
+      }, 500);
     } else {
       sidebarIcon.classList.add("sidebar-icon-rotate-left");
 
@@ -216,7 +216,7 @@ document.addEventListener("click", e => {
         sidebarIcon.classList.toggle("rotated");
         sidebar.classList.remove("sidebar-to-left");
         sidebarBlock.classList.toggle("hide");
-      }, 300);
+      }, 500);
     }
   }
   if (e.target == sidebarBlock) {

@@ -940,10 +940,10 @@ footer {
     display: none;
   }
   .sidebar-to-right {
-    animation: barright 0.3s ease-in-out;
+    animation: barright 0.4s ease-in-out;
   }
   .sidebar-to-left {
-    animation: barleft 0.3s ease-in-out;
+    animation: barleft 0.4s ease-in-out;
   }
   @keyframes barright {
     from {
