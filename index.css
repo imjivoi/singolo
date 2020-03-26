@@ -21,12 +21,13 @@ body {
   left: 0;
   right: 0;
   width: 1020px;
+  text-transform: uppercase;
 }
 
 .header__inner {
   display: flex;
   justify-content: space-between;
-  text-transform: uppercase;
+
   padding-bottom: 5px;
   position: relative;
 }
@@ -71,6 +72,14 @@ h1 {
 
 .nav__link:hover {
   color: #f06c64;
+}
+
+.sidebar-icon {
+  display: none;
+}
+
+.hide {
+  display: none;
 }
 
 .slider {
@@ -184,20 +193,22 @@ h1 {
 .black_screen_two {
   position: absolute;
   background-color: black;
-  width: 189px;
-  height: 335px;
+
   display: none;
 }
 
 .black_screen_one {
+  width: 189px;
+  height: 335px;
   top: 117px;
   left: 69px;
 }
 
 .black_screen_two {
-  rotate: 90deg;
-  top: 115px;
-  left: 500px;
+  top: 188px;
+  left: 428px;
+  width: 333px;
+  height: 188px;
 }
 
 .screen_off {
@@ -208,8 +219,10 @@ h1 {
   margin-top: 0;
   background-color: #f2f2f2;
   color: #666d89;
-  height: 494px;
+  height: 493px;
+  width: 100%;
   border-bottom: 6px #fff solid;
+  overflow: hidden;
 }
 
 .our-services h2 {
@@ -231,18 +244,20 @@ h1 {
   margin-top: 42px;
   padding: 0px;
   display: flex;
-}
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  height: 100%;
 
-#bottom {
-  margin: auto;
-  padding-bottom: 30px;
+  overflow: hidden;
 }
 
 .list__services {
-  height: 122px;
-  flex: 1 1 0;
-  position: relative;
-  padding: 0px;
+  width: 31%;
+  height: 41%;
+  margin-bottom: 40px;
 }
 
 .services__icon {
@@ -351,7 +366,7 @@ button.button-active {
 }
 
 ul {
-  width: 940px;
+  width: 100%;
 
   padding: 0;
   display: flex;
@@ -410,12 +425,15 @@ li {
 .persons__content {
   margin-right: 0;
   padding: 0px;
-  width: 300px;
+  max-width: 300px;
+  width: 32%;
 }
 
 .photos {
   margin: 0;
   padding-top: 12px;
+
+  width: 100%;
 }
 
 .name {
@@ -533,6 +551,7 @@ textarea {
 #submit {
   margin-top: 16px;
   height: 36px;
+  width: 620px;
   background-color: #d6564f;
   font-weight: 400;
   font-size: 18px;
@@ -692,7 +711,7 @@ footer {
     height: 447px;
   }
   .slider-2 {
-    padding-top: 121px;
+    padding-top: 120px;
   }
   .iphone__horizontal__img {
     width: 363px;
@@ -707,16 +726,207 @@ footer {
     padding-left: 43px;
     padding-top: 133px;
   }
+
+  .black_screen_one {
+    top: 101px;
+    left: 65px;
+    height: 253px;
+    width: 142px;
+  }
+
+  .black_screen_two {
+    top: 143px;
+    left: 322px;
+    width: 245px;
+    height: 142px;
+  }
   .arrows {
     top: 200px;
   }
   .arrow__right {
     padding-right: 250px;
   }
+  .our-services {
+    height: 650px;
+  }
+  .list__services {
+    width: 46%;
+  }
+  .portfolio-section {
+    height: 100%;
+  }
+  #contact {
+    height: 670px;
+  }
+  form {
+    width: 442px;
+    height: 309px;
+  }
+  aside {
+    margin-left: 40px;
+  }
+  input,
+  textarea {
+    width: 442px;
+  }
+  #submit {
+    width: 458px;
+  }
 }
 
 @media (max-width: 768px) {
-  body {
+  body,
+  .header,
+  .slider__inner,
+  .slider-2 {
     width: 375px;
+  }
+
+  .header__inner {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 20px;
+    top: 26px;
+  }
+  .sidebar {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    min-width: 278px;
+    height: 100%;
+    left: 24%;
+    top: 0;
+    background: #2d303a;
+    box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .sidebar-logo {
+    margin-top: 24px;
+    margin-left: 22.5px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sidebar-logo-name {
+    padding-left: 47px;
+    width: 92px;
+    height: 24px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19.6875px;
+    line-height: 24px;
+  }
+
+  .sidebar-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 184px;
+    margin-left: 71px;
+  }
+
+  .sidebar-list a {
+    margin: 0;
+    padding-bottom: 27px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.035em;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s linear;
+  }
+  .sidebar-list a:hover {
+    color: #f06c64;
+  }
+
+  .sidebar-icon {
+    position: fixed;
+    z-index: 2;
+    height: 25px;
+    width: 20px;
+    display: block;
+    cursor: pointer;
+  }
+  .sidebar-icon-rotate-right {
+    animation: rotate-right 0.3s ease-in-out;
+  }
+
+  .sidebar-icon-rotate-left {
+    animation: rotate-left 0.3s ease-in-out;
+  }
+
+  .rotated {
+    transform: rotate(90deg);
+  }
+  .wrapper::before {
+    display: none;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 101vw;
+    height: 100vh;
+    background: #2d303a;
+    opacity: 0.6;
+    z-index: -1;
+    transition: 0.3s;
+  }
+  @keyframes rotate-right {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(90deg);
+    }
+  }
+  @keyframes rotate-left {
+    from {
+      transform: rotate(90deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  h1 {
+    padding-top: 0;
+    padding-left: 103px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 32px;
+  }
+  #menu {
+    visibility: hidden;
+  }
+
+  .sidebar {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+  .sidebar-to-right {
+    animation: right 0.3s ease-in-out;
+  }
+  .sidebar-to-left {
+    animation: left 0.3s ease-in-out;
+  }
+  @keyframes right {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 16%;
+    }
+  }
+  @keyframes left {
+    from {
+      left: 16%;
+    }
+    to {
+      left: -100%;
+    }
   }
 }

@@ -1,5 +1,6 @@
 const MENU = document.getElementById("menu");
-
+const BODY = document.querySelector("body");
+const logo = document.querySelector(".logo");
 const anchor_home = document.querySelectorAll('a[href="#home"]');
 const anchor_services = document.querySelectorAll('a[href="#services"]');
 const anchor_portfolio = document.querySelectorAll('a[href="#portfolio"]');
@@ -184,4 +185,54 @@ closeBtn.addEventListener("click", () => {
   document.getElementById("result-description").innerText = "";
   document.getElementById("message-block").classList.add("hidden");
   document.getElementById("form").reset();
+});
+
+// responsive
+const sidebarIcon = document.querySelector(".sidebar-icon");
+const sidebar = document.querySelector(".sidebar");
+
+let windowWidth = window.matchMedia("(max-width: 768px)");
+
+sidebarIcon.addEventListener("click", event => {});
+
+document.addEventListener("click", e => {
+  console.log(e.target.className);
+  if (e.target == sidebarIcon) {
+    if (sidebar.classList.contains("hide")) {
+      sidebar.classList.toggle("hide");
+      sidebarIcon.classList.add("sidebar-icon-rotate-right");
+
+      sidebar.classList.add("sidebar-to-right");
+      setTimeout(() => {
+        sidebarIcon.classList.remove("sidebar-icon-rotate-right");
+        sidebarIcon.classList.toggle("rotated");
+        sidebar.classList.remove("sidebar-to-right");
+      }, 300);
+    } else {
+      if (
+        e.target.className !== sidebar &&
+        sidebar.classList.contains("hide") == false
+      ) {
+        sidebarIcon.classList.add("sidebar-icon-rotate-left");
+
+        sidebar.classList.add("sidebar-to-left");
+        setTimeout(() => {
+          sidebarIcon.classList.remove("sidebar-icon-rotate-left");
+          sidebarIcon.classList.toggle("rotated");
+          sidebar.classList.remove("sidebar-to-left");
+          sidebar.classList.toggle("hide");
+        }, 300);
+      } else {
+        sidebarIcon.classList.add("sidebar-icon-rotate-left");
+
+        sidebar.classList.add("sidebar-to-left");
+        setTimeout(() => {
+          sidebarIcon.classList.remove("sidebar-icon-rotate-left");
+          sidebarIcon.classList.toggle("rotated");
+          sidebar.classList.remove("sidebar-to-left");
+          sidebar.classList.toggle("hide");
+        }, 300);
+      }
+    }
+  }
 });
