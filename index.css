@@ -1,7 +1,11 @@
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: "Lato", sans-serif;
   width: 1020px;
   margin: auto;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -792,6 +796,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+  html,
   body,
   .header,
   .slider__inner,
@@ -926,7 +931,7 @@ footer {
     z-index: 1;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 388px;
     height: 100%;
     background: #88888888;
   }
